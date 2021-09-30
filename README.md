@@ -6,7 +6,9 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YAML file may be used to install only certain pieces of it, such as Filebeat.
 
-[install-elk.yml](https://github.com/DanVal1269/scripts_repo/blob/main/ansible/ELK/install-elk.yml) 
+- [install-elk.yml](https://github.com/DanVal1269/scripts_repo/blob/main/ansible/ELK/install-elk.yml) 
+- [filebeat-playbook.yml](https://github.com/DanVal1269/scripts_repo/blob/main/ansible/Filebeat/filebeat-playbook.yml)
+- [metricbeat-playbook.yml](https://github.com/DanVal1269/scripts_repo/blob/main/ansible/Metricbeat/metricbeat-playbook.yml)
 
 This document contains the following details:
 - Description of the Topology
@@ -104,5 +106,6 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 - Copy the configuration file to Web Vms `/etc/ansible`
-- Update the `/etc/ansible/hosts` file to include the IP address of the Elk Server VM and webservers "`[Internal IP] ansible_python_interpreter=/usr/bin/python3`" 
+- Update the `/etc/ansible/hosts` file to include the IP address of the Elk Server VM and webservers 
+"`[Internal IP] ansible_python_interpreter=/usr/bin/python3`" 
 - Run the playbook, and navigate to http://[Elk_VM_Public_IP]:5601/app/kibana to check that the installation worked as expected.
