@@ -2,11 +2,11 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![](diagrams/Cloud Security Diagram.jpg) 
+![alt text](https://github.com/DanVal1269/scripts_repo/blob/main/diagrams/Cloud%20Security%20Diagram.jpg)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YAML file may be used to install only certain pieces of it, such as Filebeat.
 
-![](ansible/ELK/install-elk.yml) 
+[install-elk.yml](https://github.com/DanVal1269/scripts_repo/blob/main/ansible/ELK/install-elk.yml) 
 
 This document contains the following details:
 - Description of the Topology
@@ -24,17 +24,17 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 Load balancing ensures that the application will be highly available, in addition to restricting in-bound access to the network.
 
 What aspect of security do load balancers protect? What is the advantage of a jump box?
--A load balancer distributes traffic across multiple servers automatically so that clients don’t have to monitor traffic or configure servers manually. The load balancer is located between clients and the servers providing extra security and performance.
+- A load balancer distributes traffic across multiple servers automatically so that clients don’t have to monitor traffic or configure servers manually. The load balancer is located between clients and the servers providing extra security and performance.
 
--The jump box computer is used as a secured point that admins connect to first before connecting to other servers.
+- The jump box computer is used as a secured point that admins connect to first before connecting to other servers.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
 
 What does Filebeat watch for?
--Filebeat watches for changes of files within the machine.
+- Filebeat watches for changes of files within the machine.
 
 What does Metricbeat record?
--Metric collects metric data from the operating system and from services running on the server. 
+- Metric collects metric data from the operating system and from services running on the server. 
 
 The configuration details of each machine may be found below.
 
@@ -57,7 +57,7 @@ Only the jump box machine can accept connections from the Internet. Access to th
 
 Machines within the network can only be accessed by jump box provisioner. 
 
-My Personal machine only has access to the ELK VM. My IP address xx.xxx.xx.xxx
+- My Personal machine only has access to the ELK VM. My IP address xx.xxx.xx.xxx
 
 A summary of the access policies in place can be found in the table below.
 
@@ -103,6 +103,6 @@ We have installed the following Beats on these machines:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the configuration file to Web Vms /etc/ansible
-- Update the /etc/ansible/hosts file to include the IP address of the Elk Server VM and webservers "[Internal IP] ansible_python_interpreter=/usr/bin/python3" 
+- Copy the configuration file to Web Vms `/etc/ansible`
+- Update the `/etc/ansible/hosts` file to include the IP address of the Elk Server VM and webservers "`[Internal IP] ansible_python_interpreter=/usr/bin/python3`" 
 - Run the playbook, and navigate to http://[Elk_VM_Public_IP]:5601/app/kibana to check that the installation worked as expected.
